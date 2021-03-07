@@ -11,23 +11,7 @@ Table of content
 7. **Structs 
 8. Pointers
 
-
-
-* Go is quite casesensitive
-for e.g
-```go
-func main(){
-}
-```
-is not equal to 
-```go
-func main()
-{
-
-}
-```
-
-##### 1. Variables declaration & initialization
+#### 1. Variables declaration & initialization
 
 ```go
 package main
@@ -48,6 +32,21 @@ func main(){
 
 }
 ```
+
+* Go is quite case-sensitive
+for e.g
+```go
+func main(){
+}
+```
+is not equal to 
+```go
+func main()
+{
+
+}
+```
+
 
 #### 2. Golang Slices: Arrays of dynamic length
 
@@ -136,4 +135,5 @@ func main(){
 Refrences:
 
 https://tour.golang.org/moretypes/7
+
 https://medium.com/rungo/error-handling-in-go-f0125de052f0
