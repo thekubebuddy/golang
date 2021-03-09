@@ -7,28 +7,31 @@ Table of content
 3. maps
 4. Conditional statements: if, if else
 5. Looooop: for, for as "while"
-6. Functions: returning fuctions, multi-return function
-7. **Structs 
+6. Functions: returning fuctions, multi-return function 
+8. **Structs 
 8. Pointers
+10. Error handlings
+* Go cmds
 
 #### 1. Variables declaration & initialization
 
 ```go
 package main
 import (
-    "fmt"
+   f "fmt" // package aliasing
 )
 
 func main(){
     // var <name> <type> = <value>
     var x int = 100
     
-    // shorthand
+    // implicit type assingment or short variable declarations
     y := 100
-    
+	a, b := 10,12
+	
     //  all variables & arrays are initializes to 0
     var z int
-    fmt.Printlln(z)
+    f.Printlln(z)
 
 }
 ```
@@ -126,14 +129,44 @@ func main(){
 	}
 }
 ```
+#### 6. Funtions: Multiple returning function, "naked" return
+```go
+func main(){
+	avg := get_avg(3,4,5)
+	fmt.Printf("avg of 3 numbers: %f",avg)
+	x,y := swap("hello","world")
+	fmt.Printf("\n%s %s\n",x,y)
+}
+
+func get_avg(a,b,c float32) float32{
+	return ((a+b+c)/3)
+}
+
+//  Pass by refrence
+func swap(a,b string)(b,a string){
+	return b,a
+}
+```
 
 
+#### Go commands
+
+```bash
+# printing the GOPATH
+go env GOPATH
+
+# canonically rewriting the go files
+go fmt
+
+# build
+go build main.go
 
 
-
+```
 
 Refrences:
 
-https://tour.golang.org/moretypes/7
-
 https://medium.com/rungo/error-handling-in-go-f0125de052f0
+https://gobyexample.com/string-formatting
+https://tour.golang.org/moretypes/7
+https://tour.golang.org/basics/5
