@@ -2,16 +2,18 @@
 
 Table of content
 ===================
-1. Variables: declaration & Initialization 
+1. Variables: declaration & Initialization, constant 
 2. Arrays & slices
 3. maps
 4. Conditional statements: if, if else
 5. Looooop: for, for as "while"
-6. Functions: returning fuctions, multi-return function 
-8. **Structs 
-8. Pointers
-10. Error handlings
-* Go cmds
+6. Range
+7. Functions: returning fuctions, multi-return function 
+9. **Structs 
+10. Pointers
+11. Error handlings
+12. Switch
+13. Go cmds
 
 #### 1. Variables declaration & initialization
 
@@ -148,6 +150,17 @@ func swap(a,b string)(b,a string){
 }
 ```
 
+#### 7.switch
+The break statement that is needed at the end of each case is provided automatically in Go.
+
+```go
+func main(){
+
+}
+```
+
+#### 8.Pointers
+* Go has no pointers arithmatic, unlike C,C++. 
 
 #### Go commands
 
@@ -164,9 +177,12 @@ go build main.go
 
 ```
 
-Refrences:
 
+References:
+```
 https://medium.com/rungo/error-handling-in-go-f0125de052f0
 https://gobyexample.com/string-formatting
+https://golang.org/pkg/fmt/
 https://tour.golang.org/moretypes/7
-https://tour.golang.org/basics/5
+***https://golang.org/doc/faq#unused_variables_and_imports
+```
