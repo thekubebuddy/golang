@@ -3,17 +3,40 @@
 Table of content
 ===================
 1. Variables: declaration & Initialization, constant 
-2. Arrays & slices
-3. maps
-4. Conditional statements: if, if else
-5. Looooop: for, for as "while"
-6. Range
-7. Functions: returning fuctions, multi-return function 
+2. Arrays 
+3. Slices, Slices literal, appending to a slices
+4. maps
+5. Conditional statements: if, if else
+6. Looooop: for, for as "while"
+7. for range: with map, arrays, blank operator
+8. Functions: returning fuctions, multi-return function, naked function, "defer" function
 9. **Structs 
 10. Pointers
 11. Error handlings
 12. Switch
 13. Go cmds
+
+
+* statically typed: makes it efficient
+* compiled language
+* 25 keywords rather that 
+* **Concurrency support**
+* OOP phylosical, though not having inheritence
+* Go is quite case-sensitive
+for e.g
+```go
+func main(){
+}
+```
+is not equal to 
+```go
+func main()
+{
+
+}
+```
+
+
 
 #### 1. Variables declaration & initialization
 
@@ -38,32 +61,21 @@ func main(){
 }
 ```
 
-* Go is quite case-sensitive
-for e.g
-```go
-func main(){
-}
-```
-is not equal to 
-```go
-func main()
-{
-
-}
-```
 
 
-#### 2. Golang Slices: Arrays of dynamic length
+#### 2. Arrays
 
 ```go
 func main(){
-    x := []int{1,22,34,554,33,45,1}
-    fmt.Println(x)
-    x = append(x,556,6,6)
-    fmt.Println(x)
+	x := [7]int{12, 3, 4, 33, 4, 45, 2}
+	for i := 0; i < len(x); i++ {
+		f.Println(x[i])
+	}
+	f.Println(x[1:5])
 }
 
 ```
+
 
 
 #### 3. Map
@@ -79,7 +91,6 @@ func main(){
 	fmt.Println(vertices["rectangle"])
 	//  deleting the keys from the map
 	delete(vertices, "square")
-
 	fmt.Println(vertices)
 }
 ```
@@ -130,7 +141,16 @@ func main(){
 	i--
 	}
 }
+
+
+func main(){
+	// for ever
+	for {
+
+	}
+}
 ```
+
 #### 6. Funtions: Multiple returning function, "naked" return
 ```go
 func main(){
@@ -150,17 +170,48 @@ func swap(a,b string)(b,a string){
 }
 ```
 
+
+#### 7. for range
+
+```go
+
+a := []int{12,34,334,44,44}
+for _,v := range a{
+	f.Println(v)
+}
+ 
+vertex := make(map[string]int)
+b["rectange"] = 3
+b["square"] = 4
+b["triangle"] = 3
+```
+
+
+
+
 #### 7.switch
 The break statement that is needed at the end of each case is provided automatically in Go.
 
+
+
+
+#### 8.	Pointers
+* Golang has no pointers arithmatic, unlike C,C++. 
+
 ```go
 func main(){
+	x := 9
+	y := &x
+	f.Println(x)
+	f.Println(y)
+	f.Println(*y)
+	*y = 10
+	f.Println(x)
+	// printing y's address
+	f.Println(&y)
 
 }
 ```
-
-#### 8.Pointers
-* Go has no pointers arithmatic, unlike C,C++. 
 
 #### Go commands
 
@@ -181,6 +232,8 @@ go build main.go
 References:
 ```
 https://medium.com/rungo/error-handling-in-go-f0125de052f0
+https://www.hackerearth.com/practice/notes/introduction-to-golang/
+https://golang.org/doc/effective_go#blank
 https://gobyexample.com/string-formatting
 https://golang.org/pkg/fmt/
 https://tour.golang.org/moretypes/7
