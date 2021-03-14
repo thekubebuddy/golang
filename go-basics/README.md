@@ -14,7 +14,9 @@ Table of content
 10. Pointers
 11. Error handlings
 12. Switch
-13. Go cmds
+13. **Go methods on structs, pointer receivers 
+15. **Go interfaces(very important)
+16. Go cmds
 
 
 * statically typed: makes it efficient
@@ -213,6 +215,32 @@ func main(){
 }
 ```
 
+#### 13. Go method & method-with-pointers(pointers receiver)
+
+```go
+type Vertex struct {
+	X, Y float32
+}
+func (v Vertex) Max() float32 {
+	if v.x > v.y {
+		return v.x
+	}
+	return v.y
+}
+func (v *Vertex) Scale(factor float32) {
+	v.X = v.X * factor
+	v.Y = v.Y * factor
+}
+
+func main() {
+	v1 := Vertex{1, 2}
+	f.Println(v1)
+	v1.Scale(10)
+	f.Println(v1)
+	f.Println(v1.Max())
+}
+```
+
 #### Go commands
 
 ```bash
@@ -237,5 +265,6 @@ https://golang.org/doc/effective_go#blank
 https://gobyexample.com/string-formatting
 https://golang.org/pkg/fmt/
 https://tour.golang.org/moretypes/7
+https://www.youtube.com/watch?v=YEKjSzIwAdA
 ***https://golang.org/doc/faq#unused_variables_and_imports
 ```
