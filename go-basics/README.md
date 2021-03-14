@@ -15,8 +15,8 @@ Table of content
 11. Error handlings
 12. Switch
 13. **Go methods on structs, pointer receivers 
-15. **Go interfaces(very important)
-16. Go cmds
+15. **Go interfaces(very important): Empty interface
+17. Go cmds
 
 
 * statically typed: makes it efficient
@@ -240,6 +240,22 @@ func main() {
 	f.Println(v1.Max())
 }
 ```
+#### Go Interface: empty
+
+```go
+type I interface{
+	m()
+}
+type M struct{
+	X int
+}
+
+func main(){
+	var i I 
+	i.M
+}
+``` 
+
 
 #### Go commands
 
