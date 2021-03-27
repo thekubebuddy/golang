@@ -16,8 +16,8 @@ Table of content
 12. Switch
 13. **Go methods on structs, pointer receivers 
 15. **Go interfaces(very important): Empty interface
-17. Go cmds
-
+17. Go console input/output(type conversion): Know your age program
+18. Go cmds
 
 * statically typed: makes it efficient
 * compiled language
@@ -240,6 +240,27 @@ func main() {
 	f.Println(v1.Max())
 }
 ```
+#### 17. Go console i/o
+```go
+package main
+import (
+	"bufio"
+	f "fmt"
+	"os"
+	"strconv"
+)
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	f.Print("In which year you born: ")
+	scanner.Scan()
+	input := scanner.Text() // this will be interpreted as the string
+	year, _ := strconv.ParseInt(input, 10, 32) // parsing the string year to the integer
+	// f.Println(year)
+	endYear := 2021
+	f.Printf("Then by the end of year 2021 you will be %dyrs old\n",endYear,endYear-year)
+}
+```
+
 #### Go Interface: empty
 
 ```go
