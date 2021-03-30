@@ -261,6 +261,18 @@ func main() {
 }
 ```
 
+#### Go interface
+* Objects having similar behaviours can be looked up dynamically as one or can be abstracted. 
+* Interface allows us to have implement some kind of behaviour which is similar between the object type, so that they can 
+be used as one or in mixed type.
+* Upper level type of the lower structs type.
+* For example: circle & square will both have the area behaviour hence those can be abstracted under the shape interface.
+
+```go
+
+
+```
+
 #### Go Interface: empty
 
 ```go
@@ -276,6 +288,7 @@ func main(){
 	i.M
 }
 ``` 
+
 
 
 #### Go commands
