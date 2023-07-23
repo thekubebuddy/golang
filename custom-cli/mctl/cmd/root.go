@@ -13,7 +13,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "mctl",
 	Short: "math ctl",
-	Long: `A utility for common math operations`,
+	Long:  `A utility for common math operations`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },

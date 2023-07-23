@@ -4,24 +4,14 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
 // operationCmd represents the operation command
 var operationCmd = &cobra.Command{
 	Use:   "operation",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("operation called")
-	},
+	Short: "match operation",
+	Long:  `math operation support for add, substract, divide`,
 }
 
 func init() {
