@@ -16,8 +16,7 @@ mctl operation add --float
 
 * Common steps
 ```
-mkdir mctl
-cd mctl
+mkdir mctl & cd mctl
 go init mod mctl
 cobra-cli init 
 
@@ -27,7 +26,9 @@ cobra-cli add operation
 
 cobra-cli add add -p 'operationCmd'
 
-go fmt cmd/...
+go fmt ./cmd/...
 go build .
+
+go run main.go operation add 1 2 4
 ```
 
